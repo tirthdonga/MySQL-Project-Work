@@ -14,8 +14,6 @@
 
 # 📋 Table of Contents
 
-# 📋 Table of Contents
-
 - [📌 Overview](#-overview)
 - [🎯 Objective](#-objective)
 - [✨ Features](#-features)
