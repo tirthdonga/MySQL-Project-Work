@@ -228,7 +228,6 @@ amount, and product sales.
 
 <div align="center">
 
----
 # 👤 Author
 
 **Tirth Donga**
