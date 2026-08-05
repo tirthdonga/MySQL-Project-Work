@@ -240,4 +240,5 @@ SQL Database Project
 
 Made with ❤️ using MySQL
 ---
+Video Explanation Link: https://drive.google.com/file/d/1Gky55gW6H77fwAQOUWgy9vW4C95bp7ul/view?usp=drive_link
 </div>
