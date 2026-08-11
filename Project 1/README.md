@@ -228,10 +228,9 @@ amount, and product sales.
 
 <div align="center">
 
----
 # 👤 Author
 
-**Tirth Donga**
+## **Tirth Donga**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Tirth_Donga-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tirthdonga)
 
@@ -241,4 +240,5 @@ SQL Database Project
 
 Made with ❤️ using MySQL
 ---
+Video Explanation Link: https://drive.google.com/file/d/1Gky55gW6H77fwAQOUWgy9vW4C95bp7ul/view?usp=drive_link
 </div>
