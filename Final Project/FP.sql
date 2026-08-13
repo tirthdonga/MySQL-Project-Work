@@ -85,14 +85,72 @@ insert into departments (departmentID, department_name) values
 
 
 -- Q1. Perform CRUD Operations on all tables.
-insert into students (studentid, first_name, last_name, email, birth_date, enrolment_date) 
-values (6, 'Tirth', 'Donda', 'tirth.donga@email.com', '2001-03-12', '2023-08-01');
+
+-- 1. Students Table
+
+insert into students (studentID, first_name, last_name, email, birth_date, enrolment_date) values
+(6, 'Tirth', 'Donda', 'tirth.donda@email.com', '2001-03-12', '2023-08-01');
 
 select * from students;
 
-update students set last_name = 'Donga' where studentid = 6;
+update students set last_name = 'Donda' where studentID = 6;
 
 delete from students where studentID = 6;
+
+delete from courses where courseID = 106;
+-- 2. Course table
+
+insert into courses 
+(courseID, course_name, departmentID, credits) values
+(106, 'Machine Learning', 6, 4);
+
+select * from courses;
+
+update courses set credits = 5 where courseID = 106;
+
+delete from courses where courseID = 106;
+
+-- 3. Instructors Table
+
+insert into instructors (instructorID, first_name, last_name, email, departmentID, salary) values
+(6, 'Tirth', 'Donda', 'tirth.donda@univ.com', 6, 88000.00);
+
+select * from instructors;
+
+update instructors set salary = 90000.00 where instructorID = 6;
+
+delete from instructors where instructorID = 6;
+
+-- 4. Enrollments Table
+
+insert into enrollments (enrolmentID, studentID, courseID, enrolmentDate) values
+(6, 6, 106, '2023-08-05');
+
+select * from enrollments;
+
+update enrollments set enrolmentDate = '2023-08-10' where enrolmentID = 6;
+
+delete from departments where departmentID = 6;
+
+delete from enrollments where enrolmentID = 6;
+-- 5. Department table
+
+insert into departments (departmentID, department_name) values 
+(6, 'Artificial Intelligence');
+
+select * from departments;
+
+update departments set department_name = 'Artificial Intelligence and Data Science' where departmentID = 6;
+
+delete from departments where departmentID = 6;
+
+-- All read
+
+select * from students;
+select * from courses;
+select * from instructors;
+select * from enrollments;
+select * from departments;
 
 -- Q2. Retrieve students who enrolled after 2022.
 select * from students where enrolment_date > '2022-12-31';
@@ -159,7 +217,7 @@ over (order by enrolmentdate, enrolmentid) running_total_students from enrollmen
 -- Q16. Label students as 'Senior' or 'Junior' based on their year of enrollment.
 select studentid, first_name, last_name, enrolment_date,
 	case 
-		when enrolment_date <= date_sub(current_date(), interval 4 year) then 'senior'
+		when enrolment_date < date_sub(current_date(), interval 4 year) then 'senior'
 		else 'junior'
 	end as student_status
 from students;
